@@ -87,13 +87,24 @@
 	mv a1, %dest
 	mv a2, %src
 	li a3, %num
-	jal strncpy
+strncpy:
+	li t0, 0 # t0 - счетчик.
+	bltz a3, end
+while:
+	beq t0, a3, end # если счетчик достиг числа => выходим
+	lb t2, (a2) 	# загружаем текущий байт в t2
+	beqz t2, end	# если загруженный эдемент равен 0 => выходим
+	sb t2, (a1)	# сохраняем в регистр t2 регистр a1
+	addi a1, a1, 1
+	addi a2, a2, 1
+	addi t0, t0, 1
+	j while
+end:
 	pop(t0)
 	pop(t2)
 	pop(a3)
 	pop(a2)
 	pop(a1)
-end:
 .end_macro
 
 # Завершение программы
