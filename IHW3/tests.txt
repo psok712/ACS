@@ -1,0 +1,12 @@
+file1.txt
+ans1.txt
+Y
+file2.txt
+ans2.txt
+Y
+file3.txt
+ans3.txt
+Y
+file4.txt
+ans4.txt
+N
