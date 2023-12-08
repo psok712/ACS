@@ -12,5 +12,5 @@
 
 ## Результаты:
 С помощью разделения операций подсчета на потоки получилось добиться ускорения: \
-![alt-текст](https://github.com/psok712/ACS/edit/main/HW8/resultTime.jpg)
+![alt-текст](https://github.com/psok712/ACS/main/HW8/resultTime.jpg)
 
